@@ -131,6 +131,11 @@ html{
   html {
     @apply font-sans;
   }
+  @media (max-width: 768px) {
+    html {
+      zoom: 0.85;
+    }
+  }
 }
 
 .character-enter {
