@@ -19,7 +19,7 @@ function TextWithCharacter({
   ],
   className = "",
 }: TextWithCharacterProps) {
-  const [phase, setPhase] = useState<"impostor" | "welcome">("impostor");
+  const [phase, setPhase] = useState<"start" | "impostor" | "welcome">("start");
   const [startTyping, setStartTyping] = useState(false);
   const [imposterScale, setImposterScale] = useState(false);
 
@@ -33,7 +33,7 @@ function TextWithCharacter({
       if (!getIsMuted()) {
         const audio = new Audio("/sounds/imposter-sound.mp3");
         audio.volume = 0.6;
-        audio.play().catch(() => {});
+        audio.play().catch((e) => console.log("Audio play failed:", e));
       }
 
       // Switch to welcome phase after 3.5 seconds
@@ -51,6 +51,19 @@ function TextWithCharacter({
       playTypingSound();
     }
   }, [phase, startTyping]);
+
+  if (phase === "start") {
+    return (
+      <div className="fixed inset-0 z-50 flex flex-col justify-center items-center bg-black">
+        <button 
+          onClick={() => setPhase("impostor")}
+          className="among-font text-3xl sm:text-5xl text-white hover:text-red-500 transition-colors animate-pulse tracking-widest"
+        >
+          CLICK TO START
+        </button>
+      </div>
+    );
+  }
 
   if (phase === "impostor") {
     return (
