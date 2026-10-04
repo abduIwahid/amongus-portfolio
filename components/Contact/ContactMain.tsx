@@ -1,7 +1,10 @@
 "use client";
 
-import { MessageSquareText, Mail, Phone, Linkedin, Github } from "lucide-react";
+import { MessageSquareText, Mail, Phone } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import LinkedInLogo from "@/assets/linkedin.svg";
+import GithubLogo from "@/assets/github.svg";
 
 export default function ContactMain() {
   const contactLinks = [
@@ -22,14 +25,14 @@ export default function ContactMain() {
     {
       name: "LinkedIn",
       value: "linkedin.com/in/abdu1wahid",
-      icon: <Linkedin className="h-6 w-6 sm:h-8 sm:w-8" />,
+      icon: <Image src={LinkedInLogo} alt="LinkedIn Logo" className="h-6 w-6 sm:h-8 sm:w-8" />,
       href: "https://www.linkedin.com/in/abdu1wahid",
       color: "hover:bg-sky-100 hover:text-sky-700 hover:border-sky-500",
     },
     {
       name: "GitHub",
       value: "github.com/abduIwahid",
-      icon: <Github className="h-6 w-6 sm:h-8 sm:w-8" />,
+      icon: <Image src={GithubLogo} alt="Github Logo" className="h-6 w-6 sm:h-8 sm:w-8" />,
       href: "https://github.com/abduIwahid",
       color: "hover:bg-gray-200 hover:text-black hover:border-black",
     },
