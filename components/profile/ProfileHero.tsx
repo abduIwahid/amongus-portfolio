@@ -25,6 +25,7 @@ function ProfileHero() {
               h-auto
               object-contain
               rounded-xl
+              mix-blend-multiply
             "
           />
         </div>
