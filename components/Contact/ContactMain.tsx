@@ -1,257 +1,80 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import ChatMessage from "@/components/Contact/ChatMessage";
-import { SendHorizonal, MessageSquareText } from "lucide-react";
+import { MessageSquareText, Mail, Phone, Linkedin, Github } from "lucide-react";
 import { motion } from "framer-motion";
-import useClickSound from "@/hooks/useClickSound";
 
 export default function ContactMain() {
-  const [input, setInput] = useState("");
-
-  const [step, setStep] = useState<"name" | "email" | "message" | "done">(
-    "name"
-  );
-
-  const [contact, setContact] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [messages, setMessages] = useState([
+  const contactLinks = [
     {
-      name: "Abdul",
-      text: "Hey! What's your name?",
-      left: true,
+      name: "Email",
+      value: "abdulwahid.connects@gmail.com",
+      icon: <Mail className="h-6 w-6 sm:h-8 sm:w-8" />,
+      href: "mailto:abdulwahid.connects@gmail.com",
+      color: "hover:bg-blue-100 hover:text-blue-700 hover:border-blue-500",
     },
-  ]);
-
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const playClick = useClickSound();
-
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
-
-  // Play click sound on every new message sent/received
-  useEffect(() => {
-    if (messages.length > 1) {
-      playClick();
-    }
-  }, [messages.length, playClick]);
-
-  const handleSend = async () => {
-    if (!input.trim() || step === "done") return;
-
-    const value = input.trim();
-
-    if (step === "name") {
-      setContact((prev) => ({
-        ...prev,
-        name: value,
-      }));
-
-      // Append user message immediately
-      setMessages((prev) => [
-        ...prev,
-        {
-          name: "You",
-          text: value,
-          left: false,
-        },
-      ]);
-
-      setStep("email");
-
-      // Append Abdul reply after delay
-      setTimeout(() => {
-        setMessages((prev) => [
-          ...prev,
-          {
-            name: "Abdul",
-            text: "Nice to meet you! What's your email?",
-            left: true,
-          },
-        ]);
-      }, 700);
-
-    } else if (step === "email") {
-      setContact((prev) => ({
-        ...prev,
-        email: value,
-      }));
-
-      // Append user message immediately
-      setMessages((prev) => [
-        ...prev,
-        {
-          name: "You",
-          text: value,
-          left: false,
-        },
-      ]);
-
-      setStep("message");
-
-      // Append Abdul reply after delay
-      setTimeout(() => {
-        setMessages((prev) => [
-          ...prev,
-          {
-            name: "Abdul",
-            text: "Awesome! What would you like to tell me?",
-            left: true,
-          },
-        ]);
-      }, 700);
-
-    } else if (step === "message") {
-      const finalContact = {
-        ...contact,
-        message: value,
-      };
-
-      setContact(finalContact);
-
-      // Append user message immediately
-      setMessages((prev) => [
-        ...prev,
-        {
-          name: "You",
-          text: value,
-          left: false,
-        },
-      ]);
-
-      // Submit form and show response after delay
-      setTimeout(async () => {
-        try {
-          const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json",
-            },
-            body: JSON.stringify({
-              access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
-              ...finalContact,
-            }),
-          });
-
-          const result = await response.json();
-
-          if (result.success) {
-            setMessages((prev) => [
-              ...prev,
-              {
-                name: "Abdul",
-                text: "Thanks! Your message has been sent successfully.",
-                left: true,
-              },
-            ]);
-
-            setStep("done");
-          } else {
-            throw new Error();
-          }
-        } catch {
-          setMessages((prev) => [
-            ...prev,
-            {
-              name: "Abdul",
-              text: "Something went wrong. Please try again.",
-              left: true,
-            },
-          ]);
-        }
-      }, 700);
-    }
-
-    setInput("");
-  };
+    {
+      name: "Phone",
+      value: "+92 307-8141252",
+      icon: <Phone className="h-6 w-6 sm:h-8 sm:w-8" />,
+      href: "tel:+923078141252",
+      color: "hover:bg-green-100 hover:text-green-700 hover:border-green-500",
+    },
+    {
+      name: "LinkedIn",
+      value: "linkedin.com/in/abdu1wahid",
+      icon: <Linkedin className="h-6 w-6 sm:h-8 sm:w-8" />,
+      href: "https://www.linkedin.com/in/abdu1wahid",
+      color: "hover:bg-sky-100 hover:text-sky-700 hover:border-sky-500",
+    },
+    {
+      name: "GitHub",
+      value: "github.com/abduIwahid",
+      icon: <Github className="h-6 w-6 sm:h-8 sm:w-8" />,
+      href: "https://github.com/abduIwahid",
+      color: "hover:bg-gray-200 hover:text-black hover:border-black",
+    },
+  ];
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-black/40 p-4 sm:p-8">
-      {/* 
-        Responsive Wrapper: 
-        Uses w-full and max-w-4xl to stretch safely on mobile while capping size on desktop. 
-        Adjusted pr-12 (mobile) to sm:pr-16 (desktop) to make room for the side button.
-      */}
-      <div className="relative w-full max-w-4xl rounded-[16px] sm:rounded-[24px] border-[3px] sm:border-[5px] border-gray-700 bg-gray-400 p-2 sm:p-3 pr-12 sm:pr-16 shadow-2xl">
+      {/* Responsive Wrapper */}
+      <div className="relative w-full max-w-2xl rounded-[16px] sm:rounded-[24px] border-[3px] sm:border-[5px] border-gray-700 bg-gray-400 p-2 sm:p-3 pr-12 sm:pr-16 shadow-2xl">
         
         {/* Inner panel */}
-        <div className="rounded-[12px] sm:rounded-[18px] border-[2px] sm:border-[4px] border-gray-600 bg-slate-300 p-2 sm:p-3">
+        <div className="rounded-[12px] sm:rounded-[18px] border-[2px] sm:border-[4px] border-gray-600 bg-slate-300 p-4 sm:p-6">
           
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 pb-2 border-b-2 border-gray-400/30 gap-2 sm:gap-0">
-            <div className="among-font flex items-center gap-2 text-xl sm:text-3xl">
-              <MessageSquareText className="h-7 w-7 sm:h-10 sm:w-10 text-gray-900" />
-              <p className="font-bold text-black">Contact</p>
-            </div>
-            
-            <div className="flex flex-col text-[10px] sm:text-xs text-gray-800 font-mono font-bold leading-tight">
-              <p>EMAIL: abdulwahid.connects@gmail.com</p>
-              <p>PHONE: +92 3XX XXXXXXX</p> 
-              <p>LINKEDIN: linkedin.com/in/abdu1wahid</p>
-              <p>GITHUB: github.com/abduIwahid</p>
-            </div>
+          <div className="among-font flex items-center justify-center gap-3 text-3xl sm:text-5xl mb-6 pb-4 border-b-4 border-gray-400/30">
+            <MessageSquareText className="h-8 w-8 sm:h-12 sm:w-12 text-gray-900" />
+            <p className="font-bold text-black tracking-widest">CONTACT</p>
           </div>
 
-          {/* Chat messages */}
-          <div className="h-[60vh] sm:h-[500px] max-h-[500px] space-y-3 overflow-y-auto no-scrollbar rounded-lg bg-slate-200/40 p-2">
-            {messages.map((message, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 15 }}
+          <div className="flex flex-col gap-4">
+            {contactLinks.map((link, idx) => (
+              <motion.a
+                key={link.name}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.25 }}
+                transition={{ duration: 0.3, delay: idx * 0.1 }}
+                className={`flex items-center gap-4 bg-white border-[3px] border-gray-400 rounded-xl p-3 sm:p-4 text-gray-700 transition-all duration-300 ${link.color}`}
               >
-                <ChatMessage
-                  name={message.name}
-                  text={message.text}
-                  left={message.left}
-                />
-              </motion.div>
+                <div className="flex-shrink-0">
+                  {link.icon}
+                </div>
+                <div className="flex flex-col overflow-hidden">
+                  <span className="font-bold text-sm sm:text-base uppercase tracking-wider">{link.name}</span>
+                  <span className="font-mono text-xs sm:text-lg truncate">{link.value}</span>
+                </div>
+              </motion.a>
             ))}
-            <div ref={messagesEndRef} />
           </div>
 
-          {/* Input */}
-          <div className="mt-2 sm:mt-3 flex items-center gap-2 sm:gap-3 rounded-xl border-[2px] sm:border-[4px] border-gray-700 bg-white px-3 sm:px-4 py-1.5 sm:py-2">
-            <input
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  handleSend();
-                }
-              }}
-              disabled={step === "done"}
-              /* text-base on mobile prevents iOS Safari from auto-zooming in on focus */
-              className="flex-1 bg-transparent text-base sm:text-xl text-black outline-none min-w-0"
-              placeholder={
-                step === "name"
-                  ? "Type your name..."
-                  : step === "email"
-                  ? "Type your email..."
-                  : step === "message"
-                  ? "Type your message..."
-                  : "Thank you!"
-              }
-            />
-
-            <button
-              onClick={handleSend}
-              disabled={step === "done"}
-              className="rounded-full p-1.5 sm:p-2 transition hover:bg-blue-100 disabled:cursor-not-allowed disabled:opacity-50 shrink-0"
-            >
-              <SendHorizonal className="h-6 w-6 sm:h-9 sm:w-9 text-blue-600" />
-            </button>
-          </div>
         </div>
 
         {/* Side button */}
-        <button className="absolute right-[2px] sm:right-[4px] top-1/2 flex h-10 w-10 sm:h-14 sm:w-14 -translate-y-1/2 items-center justify-center rounded-full border-[2px] sm:border-[4px] border-gray-600 bg-gray-200 shadow-lg">
+        <button className="absolute right-[2px] sm:right-[4px] top-1/2 flex h-10 w-10 sm:h-14 sm:w-14 -translate-y-1/2 items-center justify-center rounded-full border-[2px] sm:border-[4px] border-gray-600 bg-gray-200 shadow-lg cursor-default">
           <div className="h-5 w-5 sm:h-8 sm:w-8 rounded-full bg-white" />
         </button>
       </div>
