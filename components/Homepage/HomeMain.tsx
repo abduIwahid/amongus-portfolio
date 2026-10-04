@@ -39,7 +39,7 @@ function Main() {
       "
     >
       {/* Floating Among Us Characters */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
+      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
         {floatingCharacters}
       </div>
 
