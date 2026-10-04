@@ -5,7 +5,7 @@ import AvatarBoy from "@/assets/avatarBoyy.png";
 import GithubImage from "@/assets/github.svg";
 import LinkedInImage from "@/assets/linkedin.svg";
 import Leetcodeimage from "@/assets/leetcode.svg";
-import InstagramImage from "@/assets/instagram.svg";
+import InstagramImage from "@/assets/instagram-logo.svg";
 
 function ProfileHero() {
   return (
@@ -112,7 +112,6 @@ function ProfileHero() {
                   src={InstagramImage}
                   className="
                     w-5 h-5
-                    bg-zinc-100
                     rounded-full
                     transition-transform
                     duration-200

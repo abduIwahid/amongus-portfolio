@@ -185,18 +185,16 @@ function Page() {
             <div className="border-l border-white/30 pl-5">
               <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
                 <p className="text-lg sm:text-xl font-medium">
-                  Concentrix Daksh
+                  Ezitech Institute (Eziline)
                 </p>
 
-                <p className="text-xs text-white/40">APR 2024 — SEP 2024</p>
+                <p className="text-xs text-white/40">JUL 2026 — SEP 2026</p>
               </div>
 
-              <p className="text-sm text-white/50 mt-1">Advisor // Full-time</p>
+              <p className="text-sm text-white/50 mt-1">Machine Learning Intern // Islamabad</p>
 
               <p className="text-sm sm:text-base text-white/60 mt-4 leading-relaxed">
-                Resolved 50+ daily customer inquiries while maintaining strong
-                service quality, collaborating with cross-functional teams and
-                providing accurate product support.
+                Trained and benchmarked XGBoost, LightGBM, and scikit-learn classifiers across 7 healthcare datasets, logging in MLflow and promoting the best model to production. Built a SHAP-based explainability layer served through FastAPI. Developed an MLOps monitoring UI for dataset-drift detection and containerized with Docker.
               </p>
             </div>
           </div>
