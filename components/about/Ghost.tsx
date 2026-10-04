@@ -83,9 +83,9 @@ function Ghost({ onClick }: { onClick?: () => void }) {
 
     let animationFrame: number;
 
-    const move = () => {
+      const move = () => {
       setPosition((prev) => {
-        const speed = 3;
+        const speed = 8;
 
         let x = prev.x;
         let y = prev.y;
