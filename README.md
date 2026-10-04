@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Abdul Wahid — Among Us Portfolio
 
-## Getting Started
+> A creative, Among Us–themed developer portfolio built with **Next.js 15**, **Tailwind CSS**, and **Framer Motion**. Designed to stand out — featuring animated impostor intro sequences, interactive mini-games, floating space characters, and a fully responsive design.
 
-First, run the development server:
+🌐 **Live Demo:** [amongus-portfolio.vercel.app](https://abduiwahid-portfolio.vercel.app)
+
+---
+
+## ✨ Features
+
+- 🎮 **Among Us Intro Animation** — Impostor reveal sequence with sound on first visit
+- 👻 **Interactive About Me Room** — Control a ghost character with keyboard/joystick to explore
+- 🌌 **Floating Background Characters** — GPU-accelerated Among Us crewmates floating across all pages
+- 📁 **Projects Showcase** — Cards with live links and GitHub links for all projects
+- 🧠 **Skills Section** — Visual tech stack display
+- 👤 **About Me Page** — CV info, certifications, experience, extracurriculars & projects
+- 📞 **Contact Page** — Clean, clickable contact cards (Email, Phone, LinkedIn, GitHub)
+- 🔊 **Sound Effects** — Click sounds, typing sounds, and impostor reveal audio
+- 📱 **Fully Responsive** — Mobile-friendly with a virtual joystick for the About page
+
+---
+
+## 🗂️ Pages
+
+| Route | Description |
+|---|---|
+| `/` | Home — Impostor intro animation + main menu |
+| `/about` | Explore — Interactive ghost mini-game room |
+| `/hire-me` | About Me — CV, experience, projects, certs |
+| `/profile` | Profile — Social links & bio |
+| `/projects` | Projects — Project showcase cards |
+| `/skills` | Skills — Tech stack |
+| `/contact` | Contact — Direct contact info |
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Font:** Custom Among Us font + Geist
+- **Deployment:** [Vercel](https://vercel.com/)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+
+- npm / yarn / pnpm
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/abduIwahid/amongus-portfolio.git
+cd amongus-portfolio
+
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+amongus-portfolio/
+├── app/                  # Next.js App Router pages
+│   ├── page.tsx          # Home page with intro animation
+│   ├── about/            # Interactive ghost mini-game
+│   ├── hire-me/          # About Me / CV page
+│   ├── profile/          # Profile & social links
+│   ├── projects/         # Projects showcase
+│   ├── skills/           # Skills section
+│   └── contact/          # Contact details
+├── components/           # Reusable React components
+│   ├── Homepage/         # Main menu
+│   ├── about/            # Ghost, room, dead body components
+│   ├── Contact/          # Contact card UI
+│   ├── Projects/         # Project cards
+│   ├── Skills/           # Skill display
+│   └── Texts/            # Animated text components
+├── hooks/                # Custom React hooks
+│   ├── useFloatingCharacters.tsx
+│   └── useClickSound.ts
+├── assets/               # SVG logos and images
+└── public/               # Static assets (characters, sounds, fonts)
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📬 Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Platform | Link |
+|---|---|
+| 📧 Email | abdulwahid.connects@gmail.com |
+| 📞 Phone | +92 307-8141252 |
+| 💼 LinkedIn | [linkedin.com/in/abdu1wahid](https://linkedin.com/in/abdu1wahid) |
+| 🐙 GitHub | [github.com/abduIwahid](https://github.com/abduIwahid) |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open source and available under the [MIT License](LICENSE).
