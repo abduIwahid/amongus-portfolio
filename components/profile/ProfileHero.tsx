@@ -5,7 +5,7 @@ import AvatarBoy from "@/assets/avatarBoyy.png";
 import GithubImage from "@/assets/github.svg";
 import LinkedInImage from "@/assets/linkedin.svg";
 import Leetcodeimage from "@/assets/leetcode.svg";
-import PinterestImage from "@/assets/pinterest.svg";
+import InstagramImage from "@/assets/instagram.svg";
 
 function ProfileHero() {
   return (
@@ -109,7 +109,7 @@ function ProfileHero() {
 
               <a href="https://instagram.com/abdu1vvahid" target="_blank" aria-label="Instagram">
                 <Image
-                  src={PinterestImage}
+                  src={InstagramImage}
                   className="
                     w-5 h-5
                     bg-zinc-100
