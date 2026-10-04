@@ -183,9 +183,18 @@ export default function ContactMain() {
         {/* Inner panel */}
         <div className="rounded-[12px] sm:rounded-[18px] border-[2px] sm:border-[4px] border-gray-600 bg-slate-300 p-2 sm:p-3">
           
-          <div className="among-font flex items-center gap-2 text-xl sm:text-3xl mb-2 sm:mb-0">
-            <MessageSquareText className="h-7 w-7 sm:h-10 sm:w-10 text-gray-900" />
-            <p className="font-bold text-black">Contact</p>
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 pb-2 border-b-2 border-gray-400/30 gap-2 sm:gap-0">
+            <div className="among-font flex items-center gap-2 text-xl sm:text-3xl">
+              <MessageSquareText className="h-7 w-7 sm:h-10 sm:w-10 text-gray-900" />
+              <p className="font-bold text-black">Contact</p>
+            </div>
+            
+            <div className="flex flex-col text-[10px] sm:text-xs text-gray-800 font-mono font-bold leading-tight">
+              <p>EMAIL: abdulwahid.connects@gmail.com</p>
+              <p>PHONE: +92 3XX XXXXXXX</p> 
+              <p>LINKEDIN: linkedin.com/in/abdu1wahid</p>
+              <p>GITHUB: github.com/abduIwahid</p>
+            </div>
           </div>
 
           {/* Chat messages */}

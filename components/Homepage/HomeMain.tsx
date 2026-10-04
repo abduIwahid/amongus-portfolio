@@ -78,9 +78,9 @@ function Main() {
             <div className="grid grid-cols-2 gap-3">
               <BoxButton text="PROJECTS" path="/projects" />
 
-              <BoxButton text="ABOUT ME" path="/about" />
+              <BoxButton text="EXPLORE" path="/about" />
 
-              <BoxButton text="Hire Me" path="/hire-me" small />
+              <BoxButton text="About Me" path="/hire-me" small />
 
               <BoxButton text="CONTACT" path="/contact" small />
             </div>
