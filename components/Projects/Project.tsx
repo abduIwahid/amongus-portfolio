@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { SquareArrowUpRight, Link2 } from "lucide-react";
-import GithubSVG from "../../assets/github.svg";
+import GithubSVG from "@/assets/github.svg";
 
 export interface ProjectProps {
   name: string;

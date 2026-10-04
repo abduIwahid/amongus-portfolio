@@ -8,8 +8,8 @@ import { useFloatingCharacters } from "@/hooks/useFloatingCharacters";
 import CircleButton from "../Buttons/CircleButton";
 import BoxButton from "../Buttons/BoxButton";
 import SoundButton from "../Buttons/SoundButton";
-import LinkedInLogo from "../../assets/linkedin.svg";
-import GithubLogo from "../../assets/github.svg";
+import LinkedInLogo from "@/assets/linkedin.svg";
+import GithubLogo from "@/assets/github.svg";
 import Image from "next/image";
 
 const AMONG_US_IMAGES = [

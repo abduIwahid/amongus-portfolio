@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import SecurityRoomImage from "../../assets/projects/security-room.png"
+import SecurityRoomImage from "@/assets/projects/security-room.png"
 
 function SecurityRoom() {
   return (

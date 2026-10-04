@@ -1,4 +1,4 @@
-import Red_Ghost from "../assets/Ghost_Red.png";
+import Red_Ghost from "@/assets/Ghost_Red.png";
 import Image from "next/image";
 
 function NotFound() {

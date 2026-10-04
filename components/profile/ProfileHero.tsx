@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
 
-import AvatarBoy from "../../assets/avatarBoyy.png";
-import GithubImage from "../../assets/github.svg";
-import LinkedInImage from "../../assets/linkedin.svg";
-import Leetcodeimage from "../../assets/leetcode.svg";
-import PinterestImage from "../../assets/pinterest.svg";
+import AvatarBoy from "@/assets/avatarBoyy.png";
+import GithubImage from "@/assets/github.svg";
+import LinkedInImage from "@/assets/linkedin.svg";
+import Leetcodeimage from "@/assets/leetcode.svg";
+import PinterestImage from "@/assets/pinterest.svg";
 
 function ProfileHero() {
   return (

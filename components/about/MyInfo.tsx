@@ -1,5 +1,5 @@
 import React from "react";
-import AvatarBoy from "../../assets/avatarBoy.png";
+import AvatarBoy from "@/assets/avatarBoy.png";
 import Image from "next/image";
 import Link from "next/link";
 

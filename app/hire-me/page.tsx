@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useFloatingCharacters } from "@/hooks/useFloatingCharacters";
-import My_Photo from "../../assets/my_photo2.png";
+import My_Photo from "@/assets/my_photo2.png";
 
 const AMONG_US_IMAGES = [
   "/characters/among-us_blue_char.svg",

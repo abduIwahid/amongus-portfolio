@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import WhiteDeadBody from "../../assets/whiteDeadBodyCharacter.png"
+import WhiteDeadBody from "@/assets/whiteDeadBodyCharacter.png"
 
 function WhiteDeadBodyCharacter({ onClick }: { onClick?: () => void }) {
   return (

@@ -1,7 +1,7 @@
 "use client"
 
 import React, {useEffect, useRef} from "react";
-import Red_AmongUS_Face from "../../assets/faceIcons/red.png"
+import Red_AmongUS_Face from "@/assets/faceIcons/red.png"
 import Image from "next/image";
 import useClickSound from "@/hooks/useClickSound";
 

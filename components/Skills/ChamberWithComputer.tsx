@@ -1,8 +1,8 @@
 import React from "react";
-import Chamber from "../../assets/skills/chamber2.png";
+import Chamber from "@/assets/skills/chamber2.png";
 import Image from "next/image";
 import Vent from "../Vent";
-import ComputerImage from "../../assets/computer.png";
+import ComputerImage from "@/assets/computer.png";
 
 interface ComputerProps {
   onClick?: () => void;

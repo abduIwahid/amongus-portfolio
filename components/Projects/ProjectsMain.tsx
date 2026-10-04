@@ -18,7 +18,7 @@ import {
 
     WalletImage1,
     WalletImage2
-} from "../../assets/projects/ProjectImages"
+} from "@/assets/projects/ProjectImages"
 import MappedProjects from "./MappedProjects";
 
 const projectsArray = [

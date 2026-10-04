@@ -1,5 +1,5 @@
 import React from "react";
-import BgImage from "../../assets/profile/profile_bg.png";
+import BgImage from "@/assets/profile/profile_bg.png";
 import {
   Maroon_Character,
   Batman_Character,

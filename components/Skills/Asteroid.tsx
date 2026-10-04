@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from "react";
 import Image from "next/image";
-import AsteroidImage from "../../assets/asteroids/asteroid1.png";
+import AsteroidImage from "@/assets/asteroids/asteroid1.png";
 
 import {
   Bootstrap,
@@ -19,7 +19,7 @@ import {
   Express,
   ReactI as ReactIcon,
   Tailwind
-} from "../../assets/tech-icons/tech-icons";
+} from "@/assets/tech-icons/tech-icons";
 
 const skillIcons = {
   Bootstrap,

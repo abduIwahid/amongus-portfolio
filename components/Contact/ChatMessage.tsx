@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { RedIcon, BlueIcon } from "../../assets/faceIcons/Icons";
+import { RedIcon, BlueIcon } from "@/assets/faceIcons/Icons";
 
 interface ChatMessageProps {
   text: string;

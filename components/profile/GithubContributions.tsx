@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Purple_Ghost from "../../assets/Purple Game Ghost Sticker.gif";
+import Purple_Ghost from "@/assets/Purple Game Ghost Sticker.gif";
 import Image from "next/image";
 
 const GitHubCalendar = dynamic(

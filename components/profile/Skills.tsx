@@ -17,7 +17,7 @@ import {
   Tailwind,
   TypeScript,
   CPP
-} from "../../assets/tech-icons/tech-icons";
+} from "@/assets/tech-icons/tech-icons";
 
 import {
   Blue_Character,

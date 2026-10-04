@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import TypedText from "./TypedText";
 import Image from "next/image";
-import RedCharacter from "../../assets/red-among-us.svg";
+import RedCharacter from "@/assets/red-among-us.svg";
 import { cn } from "@/lib/utils";
 
 import { playTypingSound } from "@/hooks/useClickSound";

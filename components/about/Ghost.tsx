@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ArrowUp, ArrowDown, ArrowLeft, ArrowRight } from "lucide-react";
-import GhostGIF from "../../assets/Fall Ghost Sticker.gif";
+import GhostGIF from "@/assets/Fall Ghost Sticker.gif";
 
 function Ghost({ onClick }: { onClick?: () => void }) {
   const [position, setPosition] = useState({ x: 0, y: 0 });

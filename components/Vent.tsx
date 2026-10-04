@@ -1,8 +1,8 @@
 "use client"
 import React from "react";
 import Image from "next/image";
-import Open_Vent from "../assets/vents/open-vent.png";
-import Closed_Vent from "../assets/vents/closed-vent.png";
+import Open_Vent from "@/assets/vents/open-vent.png";
+import Closed_Vent from "@/assets/vents/closed-vent.png";
 import Link from "next/link";
 import useClickSound from "@/hooks/useClickSound";
 

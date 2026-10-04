@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-import DeadBodyReportedImage from "../../assets/deadBodyReported.png";
+import DeadBodyReportedImage from "@/assets/deadBodyReported.png";
 
 function DeadBodyReported() {
   useEffect(() => {
