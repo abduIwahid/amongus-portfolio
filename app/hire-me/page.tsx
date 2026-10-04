@@ -206,44 +206,40 @@ function Page() {
             </p>
 
             <div className="grid sm:grid-cols-3 gap-4">
-              {/* ATOM */}
+              {/* MEDISIGHT AI */}
               <div className="border border-white/20 p-5 hover:border-white/60 transition-all duration-300">
-                <p className="among-font text-2xl">ATOM</p>
+                <p className="among-font text-2xl">MEDISIGHT AI</p>
 
                 <p className="text-xs text-white/40 mt-2">
-                  MENTAL HEALTH PLATFORM
+                  HEALTHCARE PLATFORM
                 </p>
 
                 <p className="text-sm text-white/60 mt-4 leading-relaxed">
-                  React + Supabase platform featuring self-assessments,
-                  therapist discovery, AI chat, mood tracking and wellness
-                  tools.
+                  Enterprise AI healthcare platform for early multi-disease risk prediction featuring SHAP Explainable AI and Clinical Decision Support.
                 </p>
               </div>
 
-              {/* ANCHOR */}
+              {/* PREDICTLY */}
               <div className="border border-white/20 p-5 hover:border-white/60 transition-all duration-300">
-                <p className="among-font text-2xl">ANCHOR</p>
+                <p className="among-font text-2xl">PREDICTLY</p>
 
                 <p className="text-xs text-white/40 mt-2">
-                  MERN NETWORKING PLATFORM
+                  ML PROPERTY VALUATION
                 </p>
 
                 <p className="text-sm text-white/60 mt-4 leading-relaxed">
-                  Full-stack networking platform with JWT authentication,
-                  Socket.io messaging, geolocation search and dynamic profiles.
+                  AI-powered web application that predicts property valuations using a trained machine learning model with comprehensive data analysis.
                 </p>
               </div>
 
-              {/* WALLET */}
+              {/* SMART DOCTOR AI */}
               <div className="border border-white/20 p-5 hover:border-white/60 transition-all duration-300">
-                <p className="among-font text-2xl">WALLET</p>
+                <p className="among-font text-2xl">SMART DOCTOR AI</p>
 
-                <p className="text-xs text-white/40 mt-2">DIGITAL ID MANAGER</p>
+                <p className="text-xs text-white/40 mt-2">MEDICAL AI ASSISTANT</p>
 
                 <p className="text-sm text-white/60 mt-4 leading-relaxed">
-                  Secure digital ID management system built with React, Redux
-                  Toolkit and Supabase.
+                  AI-powered medical assistant that analyzes symptoms and delivers preliminary health insights through an intelligent conversational interface.
                 </p>
               </div>
             </div>
@@ -344,7 +340,7 @@ function Page() {
       >
         <span>Emergency Meeting // Available for opportunities</span>
 
-        <span>Chitkara University // CSE</span>
+        <span>COMSATS University Islamabad // AI</span>
       </footer>
     </main>
   );

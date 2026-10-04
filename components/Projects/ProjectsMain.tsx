@@ -30,7 +30,7 @@ const projectsArray = [
     githubLink:
       "https://github.com/abduIwahid/MediSight-HealthCare-Platform",
     tech: ["Next.js 14", "FastAPI", "scikit-learn", "XGBoost", "SHAP", "Supabase"],
-    images: [AnchorImage1, AnchorImage2, AnchorImage3]
+    images: ["https://image.thum.io/get/width/1200/crop/800/https://medisight-healthcare.vercel.app/"]
   },
   {
     name: "Predictly",
@@ -40,7 +40,7 @@ const projectsArray = [
     githubLink:
       "https://github.com/abduIwahid/Predictly",
     tech: ["Python", "Flask", "scikit-learn", "JavaScript", "ML"],
-    images: [AddaxImage1, AddaxImage2, AddaxImage3]
+    images: ["https://image.thum.io/get/width/1200/crop/800/https://predict-home.vercel.app/"]
   },
   {
     name: "Smart Doctor AI",
@@ -50,7 +50,7 @@ const projectsArray = [
     githubLink:
       "https://github.com/abduIwahid/Smart-Doctor-Connect",
     tech: ["Python", "AI/ML", "NLP", "Healthcare", "FastAPI"],
-    images: [KnowmoImage1, KnowmoImage2]
+    images: ["https://image.thum.io/get/width/1200/crop/800/https://smartdoctor-ai.vercel.app/"]
   },
   {
     name: "Churnex",
@@ -60,7 +60,7 @@ const projectsArray = [
     githubLink:
       "https://github.com/abduIwahid/Churnex",
     tech: ["Python", "scikit-learn", "Pandas", "XGBoost", "ML"],
-    images: [WalletImage1, WalletImage2]
+    images: ["https://image.thum.io/get/width/1200/crop/800/https://churnex.vercel.app/"]
   }
 ];
 
