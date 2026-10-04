@@ -5,8 +5,7 @@ import TypedText from "./TypedText";
 import Image from "next/image";
 import RedCharacter from "@/assets/red-among-us.svg";
 import { cn } from "@/lib/utils";
-
-import { playTypingSound } from "@/hooks/useClickSound";
+import { playTypingSound, getIsMuted } from "@/hooks/useClickSound";
 
 interface TextWithCharacterProps {
   texts?: string[];
@@ -16,19 +15,69 @@ interface TextWithCharacterProps {
 function TextWithCharacter({
   texts = [
     "Welcome to Abdul's Portfolio!",
-    // "Please wait while we load the app!",
     ":)",
   ],
   className = "",
 }: TextWithCharacterProps) {
+  const [phase, setPhase] = useState<"impostor" | "welcome">("impostor");
   const [startTyping, setStartTyping] = useState(false);
+  const [imposterScale, setImposterScale] = useState(false);
 
   useEffect(() => {
-    if (startTyping) {
+    // Phase 1: Impostor Animation
+    if (phase === "impostor") {
+      // Trigger the scale animation slightly after mount
+      setTimeout(() => setImposterScale(true), 100);
+
+      // Play sound
+      if (!getIsMuted()) {
+        const audio = new Audio("/sounds/imposter-sound.mp3");
+        audio.volume = 0.6;
+        audio.play().catch(() => {});
+      }
+
+      // Switch to welcome phase after 3.5 seconds
+      const timer = setTimeout(() => {
+        setPhase("welcome");
+      }, 3500);
+
+      return () => clearTimeout(timer);
+    }
+  }, [phase]);
+
+  useEffect(() => {
+    // Phase 2: Typing sound
+    if (phase === "welcome" && startTyping) {
       playTypingSound();
     }
-  }, [startTyping]);
+  }, [phase, startTyping]);
 
+  if (phase === "impostor") {
+    return (
+      <div className="fixed inset-0 z-50 flex flex-col justify-center items-center bg-black">
+        <div className="relative flex flex-col justify-center items-center">
+           <h1 
+             className={cn(
+               "text-6xl sm:text-8xl lg:text-[10rem] among-font text-red-600 tracking-widest drop-shadow-[0_0_15px_rgba(220,38,38,0.8)] z-10 select-none transition-transform duration-700 ease-out",
+               imposterScale ? "scale-100" : "scale-0"
+             )}
+           >
+             IMPOSTOR
+           </h1>
+           <p 
+             className={cn(
+               "mt-6 text-red-500 text-lg sm:text-2xl font-mono tracking-wider transition-opacity duration-1000 delay-500",
+               imposterScale ? "opacity-100" : "opacity-0"
+             )}
+           >
+             There is 1 Impostor among us
+           </p>
+        </div>
+      </div>
+    );
+  }
+
+  // Phase "welcome"
   return (
     <div
       className={cn(
@@ -36,8 +85,6 @@ function TextWithCharacter({
         className,
       )}
     >
-      {/* Text on LEFT */}
-      {/* Using a fixed width (240px mobile, 400px desktop) ensures the typing text doesn't shift the layout, while staying centered with the character */}
       <div className="w-[240px] sm:w-[400px] flex justify-end">
         {startTyping && (
           <TypedText
@@ -47,7 +94,6 @@ function TextWithCharacter({
         )}
       </div>
 
-      {/* Character on RIGHT */}
       <div
         className="character-enter shrink-0"
         onAnimationEnd={() => setStartTyping(true)}
