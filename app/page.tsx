@@ -15,13 +15,6 @@ export default function Home() {
 
     if (hasSeenIntro) {
       setLoading(false);
-    } else {
-      const timer = setTimeout(() => {
-        setLoading(false);
-        sessionStorage.setItem("hasSeenIntro", "true");
-      }, 7800);
-
-      return () => clearTimeout(timer);
     }
   }, []);
 
@@ -37,7 +30,10 @@ export default function Home() {
       <div className="relative z-10 min-h-screen font-mono">
         {loading ? (
           <div className="min-h-screen flex justify-center items-center w-full text-lg">
-            <TextWithCharacter />
+            <TextWithCharacter onComplete={() => {
+              setLoading(false);
+              sessionStorage.setItem("hasSeenIntro", "true");
+            }} />
           </div>
         ) : (
           <HomeMain />

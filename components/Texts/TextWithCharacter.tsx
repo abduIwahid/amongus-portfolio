@@ -10,14 +10,16 @@ import { playTypingSound, getIsMuted } from "@/hooks/useClickSound";
 interface TextWithCharacterProps {
   texts?: string[];
   className?: string;
+  onComplete?: () => void;
 }
 
 function TextWithCharacter({
   texts = [
-    "Welcome to Abdul's Portfolio!",
+    "Welcome to AbdulWahid's Portfolio!",
     ":)",
   ],
   className = "",
+  onComplete,
 }: TextWithCharacterProps) {
   const [phase, setPhase] = useState<"start" | "impostor" | "welcome">("start");
   const [startTyping, setStartTyping] = useState(false);
@@ -49,8 +51,11 @@ function TextWithCharacter({
     // Phase 2: Typing sound
     if (phase === "welcome" && startTyping) {
       playTypingSound();
+      if (onComplete) {
+        setTimeout(onComplete, 2800); // Wait for typing to finish before unmounting
+      }
     }
-  }, [phase, startTyping]);
+  }, [phase, startTyping, onComplete]);
 
   if (phase === "start") {
     return (
