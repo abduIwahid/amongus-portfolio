@@ -75,6 +75,7 @@ export const useFloatingCharacters = (images: string[], count: number = 10) => {
             fill
             className="object-contain"
             priority={false}
+            unoptimized
           />
         </div>
       ))}

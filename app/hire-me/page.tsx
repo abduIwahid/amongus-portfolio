@@ -19,7 +19,7 @@ function Page() {
   return (
     <main className="min-h-screen w-full bg-transparent text-white px-5 sm:px-8 lg:px-16 py-10 lg:py-16">
       {/* Floating Among Us Characters */}
-      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+      <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
         {floatingCharacters}
       </div>
 
