@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useFloatingCharacters } from "@/hooks/useFloatingCharacters";
-import My_Photo from "@/assets/my_photo2.png";
+
 
 const AMONG_US_IMAGES = [
   "/characters/among-us_blue_char.svg",
@@ -51,9 +51,11 @@ function Page() {
 
           <div className="relative justify-center w-[180px] sm:w-[240px] lg:w-[280px] ">
             <Image
-              src={My_Photo}
+              src="https://github.com/abduIwahid.png"
               alt="Abdul Wahid"
               priority
+              width={280}
+              height={280}
               className="w-full h-auto grayscale-20"
             />
 
