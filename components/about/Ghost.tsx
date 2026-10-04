@@ -202,7 +202,7 @@ function Ghost({ onClick }: { onClick?: () => void }) {
         ref={ghostRef}
         className="absolute left-0 top-0 z-20 opacity-80 group cursor-pointer"
         style={{
-          transform: `translate(${position.x}px, ${position.y}px)`,
+          transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
         }}
         onClick={onClick}
       >

@@ -174,10 +174,10 @@ html{
 
 @keyframes spaceFloat {
   0% {
-    transform: translate(calc(var(--startX) * 1vw), calc(var(--startY) * 1vh)) rotate(calc(var(--startRot) * 1deg));
+    transform: translate3d(calc(var(--startX) * 1vw), calc(var(--startY) * 1vh), 0) rotate(calc(var(--startRot) * 1deg));
   }
   100% {
-    transform: translate(calc(var(--endX) * 1vw), calc(var(--endY) * 1vh)) rotate(calc((var(--startRot) + var(--rotSpeed)) * 1deg));
+    transform: translate3d(calc(var(--endX) * 1vw), calc(var(--endY) * 1vh), 0) rotate(calc((var(--startRot) + var(--rotSpeed)) * 1deg));
   }
 }
 
@@ -185,6 +185,8 @@ html{
   /* linear easing makes it look like constant zero-gravity drifting */
   animation: spaceFloat var(--duration) linear infinite;
   animation-delay: var(--delay);
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 
 @keyframes orbit {
