@@ -66,11 +66,11 @@ const projectsArray = [
     name: "Study Hub (FA24-BAI)",
     content:
       "A serverless web app that organizes course resources, featuring search, filters, and PWA support. Integrated the Gemini API to generate document summaries, practice quizzes, and viva questions on demand.",
-    link: "https://github.com/abduIwahid/Study-Hub",
+    link: "https://fa24-bai.vercel.app",
     githubLink:
       "https://github.com/abduIwahid/Study-Hub",
     tech: ["JavaScript", "HTML/CSS", "Node.js", "Vercel", "Gemini API", "GitHub API"],
-    images: ["https://image.thum.io/get/width/1200/crop/800/https://github.com/abduIwahid"]
+    images: ["https://image.thum.io/get/width/1200/crop/800/https://fa24-bai.vercel.app"]
   }
 ];
 
