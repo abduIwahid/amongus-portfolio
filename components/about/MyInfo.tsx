@@ -62,6 +62,38 @@ function MyInfo() {
           </p>
         </div>
 
+        {/* Extracurricular Activities */}
+        <div className="flex flex-col">
+          <p className="font-semibold">Extracurricular</p>
+          <hr className="border-t border-gray-400 my-2" />
+          <div className="text-sm sm:text-base space-y-3">
+            <div>
+              <p className="font-semibold">AI/ML Team Member <span className="font-normal text-xs sm:text-sm text-gray-500 float-right">2026 - 2027</span></p>
+              <p className="text-xs sm:text-sm">Google Developer Groups On Campus (GDGoC) · CUI Attock</p>
+            </div>
+            <div>
+              <p className="font-semibold">Mind to Machine AI Hackathon <span className="font-normal text-xs sm:text-sm text-gray-500 float-right">May 2026</span></p>
+              <p className="text-xs sm:text-sm">Participant · CUI Wah Campus</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Certificates */}
+        <div className="flex flex-col">
+          <p className="font-semibold">Certificates</p>
+          <hr className="border-t border-gray-400 my-2" />
+          <div className="text-sm sm:text-base space-y-3">
+            <div>
+              <p className="font-semibold">Google AI Essential Specialization <span className="font-normal text-xs sm:text-sm text-gray-500 float-right">May 2026</span></p>
+              <p className="text-xs sm:text-sm">Google Career Certificates · Coursera</p>
+            </div>
+            <div>
+              <p className="font-semibold">AI & Machine Learning Developer <span className="font-normal text-xs sm:text-sm text-gray-500 float-right">Apr 2026</span></p>
+              <p className="text-xs sm:text-sm">Programming Hub</p>
+            </div>
+          </div>
+        </div>
+
         {/* Socials */}
         <div className="flex flex-col">
           <p className="font-semibold">Socials</p>

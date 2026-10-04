@@ -205,7 +205,7 @@ function Page() {
               COMPLETED TASKS
             </p>
 
-            <div className="grid sm:grid-cols-3 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {/* MEDISIGHT AI */}
               <div className="border border-white/20 p-5 hover:border-white/60 transition-all duration-300">
                 <p className="among-font text-2xl">MEDISIGHT AI</p>
@@ -240,6 +240,17 @@ function Page() {
 
                 <p className="text-sm text-white/60 mt-4 leading-relaxed">
                   AI-powered medical assistant that analyzes symptoms and delivers preliminary health insights through an intelligent conversational interface.
+                </p>
+              </div>
+
+              {/* STUDY HUB */}
+              <div className="border border-white/20 p-5 hover:border-white/60 transition-all duration-300">
+                <p className="among-font text-2xl">STUDY HUB</p>
+
+                <p className="text-xs text-white/40 mt-2">AI STUDY RESOURCE</p>
+
+                <p className="text-sm text-white/60 mt-4 leading-relaxed">
+                  Serverless PWA organizing course resources. Integrated Gemini API for document summaries, practice quizzes, and viva questions.
                 </p>
               </div>
             </div>

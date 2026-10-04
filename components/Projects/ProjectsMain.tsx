@@ -61,6 +61,16 @@ const projectsArray = [
       "https://github.com/abduIwahid/Churnex",
     tech: ["Python", "scikit-learn", "Pandas", "XGBoost", "ML"],
     images: ["https://image.thum.io/get/width/1200/crop/800/https://churnex.vercel.app/"]
+  },
+  {
+    name: "Study Hub (FA24-BAI)",
+    content:
+      "A serverless web app that organizes course resources, featuring search, filters, and PWA support. Integrated the Gemini API to generate document summaries, practice quizzes, and viva questions on demand.",
+    link: "https://github.com/abduIwahid/Study-Hub",
+    githubLink:
+      "https://github.com/abduIwahid/Study-Hub",
+    tech: ["JavaScript", "HTML/CSS", "Node.js", "Vercel", "Gemini API", "GitHub API"],
+    images: ["https://image.thum.io/get/width/1200/crop/800/https://github.com/abduIwahid"]
   }
 ];
 
