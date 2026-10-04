@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import AvatarBoy from "@/assets/avatarBoyy.png";
+
 import GithubImage from "@/assets/github.svg";
 import LinkedInImage from "@/assets/linkedin.svg";
 import Leetcodeimage from "@/assets/leetcode.svg";
@@ -15,7 +15,7 @@ function ProfileHero() {
         {/* Left - Image */}
         <div className="shrink-0">
           <Image
-            src={AvatarBoy}
+            src="/pfp.png"
             alt="Profile image"
             className="
               w-30

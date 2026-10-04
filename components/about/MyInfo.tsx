@@ -1,5 +1,5 @@
 import React from "react";
-import AvatarBoy from "@/assets/avatarBoy.png";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,12 +8,16 @@ function MyInfo() {
     <div className="p-4 sm:p-6 md:p-8 lg:p-10 select-text max-w-5xl mx-auto">
       {/* Top Section: Avatar & About */}
       <div className="text-zinc-700 font-mono flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10">
-        <Image
-          src={AvatarBoy}
-          // w-48 sm:w-56 md:w-64 lg:w-72 h-auto, 
-          className="h-100 w-auto old flex-shrink-0"
-          alt="Abdul Wahid"
-        />
+        <div className="flex-shrink-0 relative">
+          <div className="absolute inset-0 rounded-full bg-cyan-400/20 blur-2xl scale-110 pointer-events-none" />
+          <Image
+            src="/pfp.png"
+            width={220}
+            height={220}
+            className="rounded-full border-4 border-cyan-400/60 shadow-[0_0_30px_rgba(34,211,238,0.4)] object-cover object-top flex-shrink-0"
+            alt="Abdul Wahid"
+          />
+        </div>
         <div className="flex-1 w-full px-2 md:px-0 text-center md:text-left">
           <div className="mb-6">
             <h1 className="text-3xl sm:text-4xl font-bold">Abdul Wahid</h1>

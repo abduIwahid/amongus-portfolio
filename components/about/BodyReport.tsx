@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import WhiteDeadBody from "@/assets/whiteDeadBodyCharacter.png";
 
 function BodyReport() {
   return (
@@ -20,13 +19,13 @@ function BodyReport() {
       {/* Top: photo + identity */}
       <div className="flex flex-col sm:flex-row gap-6 mb-6">
         <div className="flex flex-col items-center gap-2 flex-shrink-0">
-          <div className="border-4 border-zinc-700 bg-zinc-100 p-2">
+          <div className="border-4 border-cyan-500 bg-black p-1 rounded-full shadow-[0_0_20px_rgba(34,211,238,0.5)]">
             <Image
-              src={WhiteDeadBody}
-              alt="Deceased"
+              src="/pfp.png"
+              alt="Abdul Wahid"
               width={90}
               height={90}
-              className="object-contain"
+              className="rounded-full object-cover object-top"
             />
           </div>
           <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">SPECIMEN</p>

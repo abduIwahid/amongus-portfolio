@@ -51,7 +51,7 @@ function Page() {
 
           <div className="relative justify-center w-[180px] sm:w-[240px] lg:w-[280px] ">
             <Image
-              src="https://github.com/abduIwahid.png"
+              src="/pfp.png"
               alt="Abdul Wahid"
               priority
               width={280}
