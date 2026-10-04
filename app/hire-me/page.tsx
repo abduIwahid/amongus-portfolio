@@ -56,7 +56,7 @@ function Page() {
               priority
               width={280}
               height={280}
-              className="w-full h-auto grayscale-20 mix-blend-multiply"
+              className="w-full h-auto grayscale-20"
             />
 
             {/* Image status */}

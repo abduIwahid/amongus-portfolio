@@ -14,7 +14,7 @@ function MyInfo() {
             src="/pfp.png"
             width={220}
             height={220}
-            className="rounded-full border-4 border-cyan-400/60 shadow-[0_0_30px_rgba(34,211,238,0.4)] object-cover object-top flex-shrink-0 mix-blend-multiply"
+            className="rounded-full border-4 border-cyan-400/60 shadow-[0_0_30px_rgba(34,211,238,0.4)] object-cover object-top flex-shrink-0"
             alt="Abdul Wahid"
           />
         </div>

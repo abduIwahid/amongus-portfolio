@@ -25,7 +25,7 @@ function BodyReport() {
               alt="Abdul Wahid"
               width={90}
               height={90}
-              className="rounded-full object-cover object-top mix-blend-multiply"
+              className="rounded-full object-cover object-top"
             />
           </div>
           <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">SPECIMEN</p>
