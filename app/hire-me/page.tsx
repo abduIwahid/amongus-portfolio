@@ -199,6 +199,73 @@ function Page() {
             </div>
           </div>
 
+          {/* EXTRACURRICULAR */}
+          <div>
+            <p className="among-font text-xl sm:text-2xl text-white/50 mb-5">
+              EXTRACURRICULAR
+            </p>
+
+            <div className="space-y-6">
+              <div className="border-l border-white/30 pl-5">
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                  <p className="text-lg sm:text-xl font-medium">
+                    Google Developer Groups On Campus (GDGoC)
+                  </p>
+                  <p className="text-xs text-white/40">2026 — 2027</p>
+                </div>
+                <p className="text-sm text-white/50 mt-1">AI/ML Team Member // CUI Attock</p>
+              </div>
+
+              <div className="border-l border-white/30 pl-5">
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                  <p className="text-lg sm:text-xl font-medium">
+                    Mind to Machine AI Hackathon
+                  </p>
+                  <p className="text-xs text-white/40">MAY 2026</p>
+                </div>
+                <p className="text-sm text-white/50 mt-1">Participant // CUI Wah Campus</p>
+                <a href="#" className="inline-block mt-3 text-xs tracking-widest uppercase border border-white/30 px-3 py-1.5 hover:border-white transition-colors">
+                  View Details ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* CERTIFICATES */}
+          <div>
+            <p className="among-font text-xl sm:text-2xl text-white/50 mb-5">
+              CERTIFICATES
+            </p>
+
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="border border-white/20 p-5 flex flex-col hover:border-white/60 transition-all duration-300">
+                <p className="among-font text-2xl">GOOGLE AI ESSENTIAL</p>
+                <p className="text-xs text-white/40 mt-2">COURSERA // MAY 2026</p>
+                <p className="text-sm text-white/60 mt-4 leading-relaxed mb-6 flex-1">
+                  Google Career Certificates Specialization covering generative AI, prompting, and responsible AI practices.
+                </p>
+                <div className="mt-auto">
+                  <a href="#" className="inline-block text-xs tracking-widest uppercase border border-white/30 px-3 py-1.5 hover:border-white transition-colors">
+                    View Credential ↗
+                  </a>
+                </div>
+              </div>
+
+              <div className="border border-white/20 p-5 flex flex-col hover:border-white/60 transition-all duration-300">
+                <p className="among-font text-2xl">AI & ML DEVELOPER</p>
+                <p className="text-xs text-white/40 mt-2">PROGRAMMING HUB // APR 2026</p>
+                <p className="text-sm text-white/60 mt-4 leading-relaxed mb-6 flex-1">
+                  Comprehensive developer certification focusing on core artificial intelligence concepts and machine learning implementations.
+                </p>
+                <div className="mt-auto">
+                  <a href="#" className="inline-block text-xs tracking-widest uppercase border border-white/30 px-3 py-1.5 hover:border-white transition-colors">
+                    View Credential ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* PROJECTS */}
           <div>
             <p className="among-font text-xl sm:text-2xl text-white/50 mb-5">
