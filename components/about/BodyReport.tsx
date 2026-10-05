@@ -7,31 +7,31 @@ function BodyReport() {
   return (
     <div className="font-mono text-zinc-800 p-4 sm:p-6 select-text">
       {/* Header */}
-      <div className="border-4 border-red-800 bg-red-50 p-3 sm:p-5 mb-6 text-center">
-        <p className="text-red-800 font-black text-lg sm:text-2xl tracking-widest uppercase">
+      <div className="mb-6 border-4 border-red-800 bg-[radial-gradient(circle_at_top,rgba(254,202,202,0.9),rgba(127,29,29,0.9)_45%,rgba(69,10,10,1)_100%)] p-3 text-center shadow-[0_0_30px_rgba(239,68,68,0.4)] sm:p-5">
+        <p className="text-lg font-black tracking-[0.4em] text-red-50 uppercase sm:text-2xl">
           ☠ BODY REPORT ☠
         </p>
-        <p className="text-red-600 text-xs sm:text-sm mt-1 font-bold">
+        <p className="mt-1 text-xs font-bold tracking-[0.25em] text-red-200 sm:text-sm">
           CLASSIFIED — EMERGENCY MEETING FILE
         </p>
       </div>
 
       {/* Top: photo + identity */}
-      <div className="flex flex-col sm:flex-row gap-6 mb-6">
-        <div className="flex flex-col items-center gap-2 flex-shrink-0">
-          <div className="border-4 border-cyan-500 bg-black p-1 rounded-full shadow-[0_0_20px_rgba(34,211,238,0.5)]">
+      <div className="mb-6 flex flex-col gap-6 sm:flex-row">
+        <div className="flex shrink-0 flex-col items-center gap-2">
+          <div className="rounded-full border-4 border-cyan-400 bg-[#020617] p-1.5 shadow-[0_0_25px_rgba(34,211,238,0.5)] ring-2 ring-[#f8fafc]/30">
             <Image
               src="/pfp.png"
               alt="Abdul Wahid"
               width={90}
               height={90}
-              className="rounded-full object-cover object-top"
+              className="rounded-full border-2 border-white/20 object-cover object-top shadow-[0_0_18px_rgba(59,130,246,0.5)]"
             />
           </div>
-          <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">SPECIMEN</p>
+          <p className="text-[10px] font-black uppercase tracking-[0.45em] text-zinc-500">SPECIMEN</p>
         </div>
 
-        <div className="flex flex-col gap-2 text-sm sm:text-base flex-1">
+        <div className="flex flex-1 flex-col gap-2 text-sm sm:text-base">
           <ReportRow label="FULL NAME" value="Abdul Wahid" />
           <ReportRow label="STATUS" value="🔴 DEVELOPER (Suspected Impostor)" />
           <ReportRow label="CGPA" value="3.46 / 4.00" />
@@ -46,7 +46,7 @@ function BodyReport() {
 
       {/* Cause of death */}
       <Section title="⚠ CAUSE OF INCIDENT">
-        <p className="text-red-700 font-bold text-sm sm:text-base">
+        <p className="text-sm font-bold text-red-700 sm:text-base">
           Too many side projects. Victim was last seen building an AI-themed portfolio at 2AM.
         </p>
       </Section>
@@ -79,7 +79,7 @@ function BodyReport() {
 
       {/* Exhibit B: Weapons (Skills) */}
       <Section title="🔫 EXHIBIT B — WEAPONS FOUND ON SCENE">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
+        <div className="grid grid-cols-1 gap-2 text-xs sm:grid-cols-2 sm:text-sm">
           <WeaponTag label="Python (85%)" />
           <WeaponTag label="Machine Learning" />
           <WeaponTag label="Next.js / React" />
@@ -94,7 +94,7 @@ function BodyReport() {
       <Divider />
 
       {/* Verdict */}
-      <div className="border-4 border-zinc-800 bg-zinc-800 text-green-400 font-black text-center p-3 sm:p-4 mt-2 tracking-widest text-sm sm:text-base uppercase">
+      <div className="mt-2 border-4 border-zinc-800 bg-[#0f172a] p-3 text-center text-sm font-black uppercase tracking-[0.3em] text-emerald-400 sm:p-4 sm:text-base">
         VERDICT: NOT THE IMPOSTOR — JUST A CREWMATE WHO CODES 🚀
       </div>
     </div>
@@ -103,11 +103,11 @@ function BodyReport() {
 
 function ReportRow({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex flex-col sm:flex-row sm:gap-2 border-b border-dashed border-zinc-300 pb-1">
-      <span className="font-bold text-zinc-500 uppercase text-xs sm:text-sm w-full sm:w-40 shrink-0">
+    <div className="flex flex-col border-b border-dashed border-zinc-300 pb-1 sm:flex-row sm:gap-2">
+      <span className="w-full shrink-0 text-[10px] font-black uppercase tracking-[0.25em] text-zinc-500 sm:w-40 sm:text-sm">
         {label}:
       </span>
-      <span className="text-zinc-800 text-xs sm:text-sm">{value}</span>
+      <span className="text-xs text-zinc-800 sm:text-sm">{value}</span>
     </div>
   );
 }
@@ -115,14 +115,14 @@ function ReportRow({ label, value }: { label: string; value: string }) {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="mb-4">
-      <p className="font-black text-xs sm:text-sm uppercase tracking-widest text-zinc-600 mb-2">{title}</p>
+      <p className="mb-2 text-[10px] font-black uppercase tracking-[0.3em] text-zinc-600 sm:text-sm">{title}</p>
       {children}
     </div>
   );
 }
 
 function Divider() {
-  return <hr className="border-2 border-dashed border-zinc-400 my-4" />;
+  return <hr className="my-4 border-2 border-dashed border-zinc-400" />;
 }
 
 function ExhibitItem({
@@ -137,12 +137,12 @@ function ExhibitItem({
   bullets: string[];
 }) {
   return (
-    <div className="mb-3 border-l-4 border-red-600 pl-3">
-      <p className="font-bold text-sm sm:text-base">{role}</p>
-      <p className="text-xs sm:text-sm text-zinc-500">
+    <div className="mb-3 border-l-4 border-red-600 bg-red-50/60 pl-3">
+      <p className="text-sm font-bold sm:text-base">{role}</p>
+      <p className="text-xs text-zinc-500 sm:text-sm">
         {org} · <span className="italic">{period}</span>
       </p>
-      <ul className="list-disc list-inside text-xs sm:text-sm mt-1 text-zinc-700">
+      <ul className="mt-1 list-inside list-disc text-xs text-zinc-700 sm:text-sm">
         {bullets.map((b, i) => (
           <li key={i}>{b}</li>
         ))}
@@ -153,7 +153,7 @@ function ExhibitItem({
 
 function WeaponTag({ label }: { label: string }) {
   return (
-    <div className="border-2 border-red-700 bg-red-50 text-red-800 font-bold px-2 py-1 text-center rounded">
+    <div className="rounded border-2 border-red-700 bg-red-50 px-2 py-1 text-center font-bold text-red-800">
       {label}
     </div>
   );
