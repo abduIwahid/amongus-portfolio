@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import { Settings, FileUser, ListCheck, UserRound } from "lucide-react";
+import { ListCheck, UserRound } from "lucide-react";
 
 import { useFloatingCharacters } from "@/hooks/useFloatingCharacters";
 
@@ -23,10 +22,6 @@ const AMONG_US_IMAGES = [
 
 function Main() {
   const floatingCharacters = useFloatingCharacters(AMONG_US_IMAGES, 15);
-
-  const handleClick = (name: string) => {
-    console.log(`${name} clicked`);
-  };
 
   return (
     <main
@@ -73,14 +68,14 @@ function Main() {
           </h1>
 
           {/* Menu */}
-          <div className="w-full max-w-[650px]">
+          <div className="w-full max-w-162.5">
             {/* Main Buttons */}
             <div className="grid grid-cols-2 gap-3">
               <BoxButton text="PROJECTS" path="/projects" />
 
-              <BoxButton text="EXPLORE" path="/about" />
+              <BoxButton text="EXPLORE" path="/hire-me" />
 
-              <BoxButton text="About Me" path="/hire-me" small />
+              <BoxButton text="About Me" path="/about" small />
 
               <BoxButton text="CONTACT" path="/contact" small />
             </div>

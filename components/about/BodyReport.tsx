@@ -35,8 +35,8 @@ function BodyReport() {
           <ReportRow label="FULL NAME" value="Abdul Wahid" />
           <ReportRow label="STATUS" value="🔴 DEVELOPER (Suspected Impostor)" />
           <ReportRow label="CGPA" value="3.46 / 4.00" />
-          <ReportRow label="AFFILIATION" value="COMSATS University Islamabad" />
-          <ReportRow label="PROGRAM" value="BS Artificial Intelligence (5th Sem)" />
+          <ReportRow label="AFFILIATION" value="COMSATS University Islamabad, Attock Campus" />
+          <ReportRow label="PROGRAM" value="BS Artificial Intelligence" />
           <ReportRow label="CONTACT" value="+92 307-8141252" />
           <ReportRow label="EMAIL" value="abdulwahid.connects@gmail.com" />
         </div>

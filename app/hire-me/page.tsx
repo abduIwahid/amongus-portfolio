@@ -89,7 +89,7 @@ function Page() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-base sm:text-lg text-white/70 leading-relaxed">
-              I'm Abdul Wahid, a 5th Semester Artificial Intelligence student at COMSATS University Islamabad with a strong passion for Machine Learning and Python development. I build intelligent systems that solve real-world challenges.
+              I&apos;m Abdul Wahid, a 5th Semester Artificial Intelligence student at COMSATS University Islamabad with a strong passion for Machine Learning and Python development. I build intelligent systems that solve real-world challenges.
             </p>
           </div>
 
@@ -224,7 +224,7 @@ function Page() {
                   <p className="text-xs text-white/40">MAY 2026</p>
                 </div>
                 <p className="text-sm text-white/50 mt-1">Participant // CUI Wah Campus</p>
-                <a href="#" className="inline-block mt-3 text-xs tracking-widest uppercase border border-white/30 px-3 py-1.5 hover:border-white transition-colors">
+                <a href="https://drive.google.com/file/d/1UGs2P9JgDlXth--FgMtQXr_n10pAjnsu/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-xs tracking-widest uppercase border border-white/30 px-3 py-1.5 hover:border-white transition-colors">
                   View Details ↗
                 </a>
               </div>
@@ -245,7 +245,12 @@ function Page() {
                   Google Career Certificates Specialization covering generative AI, prompting, and responsible AI practices.
                 </p>
                 <div className="mt-auto">
-                  <a href="#" className="inline-block text-xs tracking-widest uppercase border border-white/30 px-3 py-1.5 hover:border-white transition-colors">
+                  <a
+                    href="https://www.coursera.org/account/accomplishments/specialization/ET3L35MRSLBI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-xs tracking-widest uppercase border border-white/30 px-3 py-1.5 hover:border-white transition-colors"
+                  >
                     View Credential ↗
                   </a>
                 </div>
@@ -253,12 +258,17 @@ function Page() {
 
               <div className="border border-white/20 p-5 flex flex-col hover:border-white/60 transition-all duration-300">
                 <p className="among-font text-2xl">AI & ML DEVELOPER</p>
-                <p className="text-xs text-white/40 mt-2">PROGRAMMING HUB // APR 2026</p>
+                <p className="text-xs text-white/40 mt-2">EDUCATIVE // MAY 2026</p>
                 <p className="text-sm text-white/60 mt-4 leading-relaxed mb-6 flex-1">
-                  Comprehensive developer certification focusing on core artificial intelligence concepts and machine learning implementations.
+                  Verified certification in Python, NumPy, pandas, scikit-learn, and practical machine learning workflows.
                 </p>
                 <div className="mt-auto">
-                  <a href="#" className="inline-block text-xs tracking-widest uppercase border border-white/30 px-3 py-1.5 hover:border-white transition-colors">
+                  <a
+                    href="https://www.educative.io/verify-certificate/1SX3S0S4GG"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-xs tracking-widest uppercase border border-white/30 px-3 py-1.5 hover:border-white transition-colors"
+                  >
                     View Credential ↗
                   </a>
                 </div>
